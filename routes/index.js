@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+const classroomRoutes = require('./classroom-route');
 
 // Welcome Page
 router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
@@ -11,5 +12,7 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
+
+router.use('/classrooms', classroomRoutes);
 
 module.exports = router;
