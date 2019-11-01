@@ -15,6 +15,11 @@ const MyNavbar = () => {
               My Classrooms
             </Link>
           </li>
+          <li className = "navbar-item">
+            <Link className = "nav-link text-link mx-2" to = '/addClassroom'>
+              Add a Classroom
+            </Link>
+          </li>
          
         </ul>
       </div>

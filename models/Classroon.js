@@ -14,6 +14,18 @@ const ClassroomSchema = new Schema ({
   name: {
     type: String,
     required: true
+  },
+  students: {
+    type: String,
+    required: true
+  },
+  period: {
+    type: String,
+    required: true
+  },
+  schoolYear: {
+    type: String,
+    required: true
   }
 })
 
